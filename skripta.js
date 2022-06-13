@@ -458,6 +458,11 @@ Cannot read properties of null at Array.map (<anonymous>) */
 function podaciFilma(film) {
   return `
   <div class="filmic">
+    <img src="${
+      film.show.image ?
+      film.show.image.medium :
+      'http://www.dermalina.com/no-image-placeholder/'
+    }"></img>
     <h1>${film.show.name} <span>(ime filma)</span></h1> 
     <h2>${film.show.language} <span>(jezik)</span></h2>  
     <h3>${film.show.genres} <span>(žanr)</span></h3>
